@@ -1,0 +1,3 @@
+rootProject.name = 'SprintChallenge1_2'
+include 'LibrariesAndUtilities:LessonPlanResources'
+

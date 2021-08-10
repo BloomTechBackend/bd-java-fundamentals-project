@@ -1,0 +1,4 @@
+Troll,3
+Oger,5
+Imp,2
+Dragon,10

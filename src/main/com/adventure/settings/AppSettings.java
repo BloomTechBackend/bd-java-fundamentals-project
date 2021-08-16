@@ -3,10 +3,13 @@ package main.com.adventure.settings;
 public class AppSettings {
 
     /**You will update this property for each project**/
-    final public static Story story = Story.S2M1_CaveEscape;
+    final public static Story story = Story.S1M1_Beginning;
 
     public enum Story {
         TestScene,
+
+        S1M1_Beginning,
+        S1M2_Beginning,
 
         S2M1_CaveEscape,
         S2M2_TestDirections,
@@ -26,12 +29,6 @@ public class AppSettings {
     public static int getStartingLocation() {
         int startingLocation = 0;
         switch (story) {
-            case S2M1_CaveEscape:
-            case S2M4_DigEscape:
-            case S3M2_MonsterScene:
-            case TestScene:
-                startingLocation = 0;
-                break;
             case S2M2_TestDirections:
             case S2M3_HouseAndCave:
                 startingLocation = 1;

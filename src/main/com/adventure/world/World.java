@@ -21,6 +21,7 @@ public class World {
      */
     public World() {
         switch (AppSettings.story) {
+            case S1M2_Beginning:
             case S2M1_CaveEscape:
                 scenes.add(SceneFactory.buildCaveEscapeScene());
                 break;

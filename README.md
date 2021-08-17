@@ -25,4 +25,6 @@ If you have any infractions after running the lint checker, you'll find a file l
 
 If you find any issues with the codebase, please feel free to create an issue ticket and, if you feel so inclined, create a pull request with your fix. I will happily review all issues and PRs that are submitted.
 
-- Byron
+Best of luck!
+
+-- Byron

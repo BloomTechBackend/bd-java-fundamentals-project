@@ -7,7 +7,7 @@ import main.com.adventure.world.objects.Tangible;
  */
 public class Backpack {
 
-    static private final int MAX_CAPACITY = 5;
+    private static final int MAX_CAPACITY = 5;
 
     private final Tangible[] items = new Tangible[MAX_CAPACITY];
 

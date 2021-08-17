@@ -1,11 +1,10 @@
 package main.com.adventure.player;
 
 import main.com.adventure.settings.AppSettings;
-import main.com.adventure.world.Direction;
-import main.com.adventure.world.objects.keys.Key;
 import main.com.adventure.world.objects.Shovel;
 import main.com.adventure.world.objects.Tangible;
 import main.com.adventure.world.objects.Weapon;
+import main.com.adventure.world.objects.keys.Key;
 
 public class Player {
 
@@ -124,7 +123,7 @@ public class Player {
         return key;
     }
 
-    public void addShovel(Shovel item) {
+    public void setShovel(Shovel item) {
         shovel = item;
     }
 

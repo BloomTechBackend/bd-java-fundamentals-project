@@ -1,8 +1,11 @@
 package main.com.adventure.world.scenes;
 
+// CHECKSTYLE:OFF
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+
+// CHECKSTYLE:ON
 
 public class SceneDescriptionFileReader {
 

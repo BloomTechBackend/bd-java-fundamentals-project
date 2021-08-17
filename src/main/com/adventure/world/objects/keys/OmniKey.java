@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class OmniKey implements Tangible {
 
-    static private final int pinLength = 5;
+    private static final int pinLength = 5;
     public boolean[] pins = new boolean[pinLength];
 
     /**

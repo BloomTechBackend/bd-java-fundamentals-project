@@ -24,11 +24,6 @@
         <property name="file" value="${checkstyle.suppression.filter}" 
             default="suppressions.xml"/>
     </module>
-    <module name="SuppressWithPlainTextCommentFilter">
-        <property name="offCommentFormat" value="CHECKSTYLE\:OFF\:([\w\|]+)" />
-        <property name="onCommentFormat"   value="CHECKSTYLE\:ON\:([\w\|]+)" />
-        <property name="checkFormat" value="$1" />
-    </module>
 
     <!-- Javadoc Comments -->
     <!-- http://checkstyle.sourceforge.net/config_javadoc.html -->
@@ -57,9 +52,15 @@
                   value="^package.*|^import.*|http://|https://" />
     </module>
 
+    <module name="SuppressWithPlainTextCommentFilter">
+        <property name="offCommentFormat" value="CSOFF"/>
+        <property name="onCommentFormat" value="CSON"/>
+    </module>
+
     <!-- TreeWalker -->
     <!-- http://checkstyle.sourceforge.net/config.html#TreeWalker -->
     <module name="TreeWalker">
+
         <!-- Annotations -->
         <!-- http://checkstyle.sourceforge.net/config_annotation.html -->
         <module name="AnnotationLocation">
@@ -166,6 +167,7 @@
         <module name="SuperClone" />
         <module name="SuperFinalize" />
         <module name="UnnecessaryParentheses" />
+
 
         <!-- Imports -->
         <!-- http://checkstyle.sourceforge.net/config_imports.html -->

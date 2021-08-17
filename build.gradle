@@ -14,11 +14,9 @@ repositories {
 }
 
 checkstyle {
-//    sourceSets = [sourceSets.main, sourceSets.test]
     sourceSets = [sourceSets.main]
     configFile = file("$rootDir/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/checkstyle.xml")
     configProperties.put('checkstyle.suppression.filter', "$rootDir/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/suppressions.xml")
-    ignoreFailures = true
 }
 
 tasks.withType(Checkstyle) {

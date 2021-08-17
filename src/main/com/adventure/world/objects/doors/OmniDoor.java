@@ -1,7 +1,7 @@
 package main.com.adventure.world.objects.doors;
 
-import main.com.adventure.world.objects.keys.Key;
 import main.com.adventure.world.objects.Tangible;
+import main.com.adventure.world.objects.keys.Key;
 import main.com.adventure.world.objects.keys.OmniKey;
 
 import java.util.Arrays;
@@ -21,14 +21,14 @@ import java.util.Arrays;
 public class OmniDoor implements Tangible {
 
     /**
+     * The number of pins this door has.
+     */
+    private static final int pinCount = 5;
+
+    /**
      * Tells us if the door is open or not.
      */
     public boolean isOpen = false;
-
-    /**
-     * The number of pins this door has.
-     */
-    static private final int pinCount = 5;
 
     /**
      * The pins, represented as booleans (true = up, false = down).

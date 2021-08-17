@@ -2,7 +2,7 @@
 
 Welcome to the Text Adventure Project! This is for Unit 1 of the Backend Development course and is intended to ensure that you have a good handle on the Java fundamentals that you'll need for future units. 
 
-Start by forking this project. You will use this same project throughout Unit 1, building on what you previously have built, and forking will let you work within your own environment. 
+**Start by forking this project**. You will use this same project throughout Unit 1, building on what you previously have built, and forking will let you work within your own environment. 
 
 You can find instructions for each assignment by going to the `Instructions` folder. You will be graded on your code's ability can successfully pass each test and your code's organization (based on a lint checker).
 

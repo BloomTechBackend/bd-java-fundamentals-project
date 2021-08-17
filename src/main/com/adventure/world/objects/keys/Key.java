@@ -17,19 +17,12 @@ public class Key implements Tangible {
 
     //TODO variable for level and name needed here
 
-    /**
-     * Default constructor. Level is set to 1.
-     */
     //TODO Add default (i.e. no params) constructor here
 
-    /**
-     * Creates a key taking in a level
-     */
     //TODO add constructor that takes a level and name, and saves it
 
-
-    //TODO Fix this so it references the level property instead of 0
     public int getLevel() {
+        //TODO Fix this so it references the level property instead of 0
         return 0;
     }
 

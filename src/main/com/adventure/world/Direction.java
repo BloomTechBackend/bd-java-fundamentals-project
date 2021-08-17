@@ -2,6 +2,6 @@ package main.com.adventure.world;
 
 public class Direction {
 
-    final public static String WEST = "WEST";
-    final public static String EAST = "EAST";
+    public static final String WEST = "WEST";
+    public static final String EAST = "EAST";
 }

@@ -29,6 +29,11 @@ public class GameController {
      * Starts the game.
      */
     public void startGame() {
+        if (AppSettings.story == AppSettings.Story.S1M2_Beginning) {
+            System.out.println("No crashes, so you win!");
+            gameOver();
+            return;
+        }
         getName();
         System.out.println("Entering the world...");
         describeCurrentScene();
@@ -248,6 +253,9 @@ public class GameController {
      * Prints the help script to the user.
      */
     public void printHelp() {
+        if (AppSettings.story == AppSettings.Story.S1M2_Beginning) {
+            return;
+        }
         System.out.println("Here are the list of commands that you can type:");
         System.out.println("- help (prints this message)");
         System.out.println("- move <direction>");

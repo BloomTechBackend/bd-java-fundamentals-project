@@ -22,9 +22,9 @@ public class World {
     public World() {
         switch (AppSettings.story) {
             case S1M2_Beginning:
+                break;
             case S2M1_CaveEscape:
                 scenes.add(SceneFactory.buildCaveEscapeScene());
-                break;
             case S2M2_TestDirections:
                 listener = new ConsoleEscapeTangibleListener();
                 for (int i = 0; i < 3; i++) {

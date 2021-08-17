@@ -21,3 +21,8 @@ To run the lint checker, you can do so in your terminal by running the following
 
 If you have any infractions after running the lint checker, you'll find a file link in your terminal that you can copy and paste into your browser for more details.
 
+### Issues
+
+If you find any issues with the codebase, please feel free to create an issue ticket and, if you feel so inclined, create a pull request with your fix. I will happily review all issues and PRs that are submitted.
+
+- Byron

@@ -37,7 +37,17 @@ public class GameController {
         getName();
         System.out.println("Entering the world...");
         describeCurrentScene();
-        getNextCommand();
+
+        if (AppSettings.story == AppSettings.Story.S2M1_CaveEscape) {
+            if (player.canOpenDoor()) {
+                System.out.println("You have the power to open the door! You go through!");
+            } else {
+                System.out.println("Eh, you don't have the power to open a door. Not much of an adventurer...");
+            }
+            gameOver();
+        } else {
+            getNextCommand();
+        }
     }
 
     private void move(String direction) {

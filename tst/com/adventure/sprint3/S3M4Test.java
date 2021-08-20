@@ -1,6 +1,6 @@
 package com.adventure.sprint3;
 
-import com.adventure.settings.CommandVerb;
+import main.com.adventure.settings.CommandVerb;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

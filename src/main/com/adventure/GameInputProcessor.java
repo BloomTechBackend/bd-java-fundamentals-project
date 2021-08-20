@@ -46,8 +46,7 @@ public class GameInputProcessor {
     }
 
     private Command processCommand(String input) {
-        if (input.contains(Command.HELP) ||
-                input.contains(Command.MOVE) ||
+        if (input.contains(Command.MOVE) ||
                 input.contains(Command.USE) ||
                 input.contains(Command.TAKE) ||
                 input.contains(Command.EXAMINE)

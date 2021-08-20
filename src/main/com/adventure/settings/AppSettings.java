@@ -40,6 +40,7 @@ public class AppSettings {
         switch (story) {
             case S2M2_TestDirections:
             case S2M3_HouseAndCave:
+            case S3M1_TestDirections:
                 startingLocation = 1;
                 break;
             default:

@@ -16,17 +16,29 @@ public class S3M2Test {
     @Test
     public void testCombatSimulator() {
         Player player = new Player();
-        Monster monster = new Monster("Ogre", 5, 10);
         player.setHealth(10);
+
+        Monster monster = new Monster("Ogre", 5, 10);
         Weapon noWeapon = new Weapon("bare knuckles", 3);
         player.setWeapon(noWeapon);
         CombatController controller = new CombatController(player, monster);
-
         controller.autosimulateCombat();
+
         assertTrue(controller.isPlayerDefeated());
 
-        player.setHealth(10);
-        monster.setHealth(10);
+        controller.reset();
+        assertEquals(10, player.getHealth());
+        assertEquals(10, monster.getHealth());
+
+        Monster weakMonster = new Monster("bat", 1, 10);
+        controller = new CombatController(player, weakMonster);
+        controller.autosimulateCombat();
+
+        assertFalse(controller.isPlayerDefeated());
+
+        controller.reset();
+        assertEquals(10, player.getHealth());
+        assertEquals(10, monster.getHealth());
 
         Weapon bigSword = new Weapon("sword", 10);
         player.setWeapon(bigSword);
@@ -39,6 +51,9 @@ public class S3M2Test {
     public void testReadFile() throws IOException {
         var reader = new SceneDescriptionFileReader();
         String result = reader.printTextFromFile("TestScene.txt");
-        assertEquals("Test file\n", result);
+        assertEquals("Roses are red\n" +
+                "Violets are blue\n" +
+                "Unexpected bracket\n" +
+                "On line 32\n", result);
     }
 }

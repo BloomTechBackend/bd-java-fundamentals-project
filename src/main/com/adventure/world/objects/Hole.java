@@ -23,6 +23,10 @@ public class Hole {
         return false;
     }
 
+    /**
+     * if the HoleContent is uncovered, return the content. Otherwise, return null.
+     * @return - the content if the hole is uncovered.
+     */
     public Tangible getContent() {
         return null;
     }

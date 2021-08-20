@@ -11,11 +11,14 @@ public enum CommandVerb {
     USE,
     DIG,
     EXAMINE,
-    LOOK_AROUND,
+    LOOK,
     INVALID,
+    HELP,
+    //Used in Sprint 3 Module 2
     FIGHT,
-    INVENTORY,
-    HELP;
+    //Used in Sprint 3 Module 3
+    INVENTORY;
+
 
     /**
      * Takes a users input and determines which verb to include in the command.
@@ -23,66 +26,7 @@ public enum CommandVerb {
      * @return - the CommandVerb associated with the given input.
      */
     public static CommandVerb getVerb(String verbString) {
-
-        if (verbString == null) {
-            return INVALID;
-        }
-
-        CommandVerb verb;
-        if (HELP.getCommandVariations().equals(verbString)) {
-            verb = HELP;
-        } else if (MOVE.getCommandVariations().equals(verbString)) {
-            verb = MOVE;
-        } else if (USE.getCommandVariations().equals(verbString)) {
-            verb = USE;
-        } else if (TAKE.getCommandVariations().equals(verbString)) {
-            verb = TAKE;
-        } else if (LOOK_AROUND.getCommandVariations().equals(verbString)) {
-            verb = LOOK_AROUND;
-        } else if (EXAMINE.getCommandVariations().equals(verbString)) {
-            verb = EXAMINE;
-        } else if (DIG.getCommandVariations().equals(verbString)) {
-            verb = DIG;
-        } else if (FIGHT.getCommandVariations().equals(verbString)) {
-            verb = FIGHT;
-        } else {
-            verb = INVALID;
-        }
-
-        return verb;
+        return INVALID;
     }
 
-    private String getCommandVariations() {
-        String verb = "";
-        switch (this) {
-            case TAKE:
-                verb = "take";
-                break;
-            case MOVE:
-                verb = "move";
-                break;
-            case USE:
-                verb = "use";
-                break;
-            case DIG:
-                verb = "dig";
-                break;
-            case EXAMINE:
-                verb = "examine";
-                break;
-            case LOOK_AROUND:
-                verb = "look";
-                break;
-            case HELP:
-                verb = "help";
-                break;
-            case FIGHT:
-                verb = "fight";
-                break;
-            default:
-                verb =  "";
-                break;
-        }
-        return verb;
-    }
 }

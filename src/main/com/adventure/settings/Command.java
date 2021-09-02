@@ -2,7 +2,7 @@ package main.com.adventure.settings;
 
 public class Command {
 
-    public static final  String TAKE = "take";
+    public static final String TAKE = "take";
     public static final String MOVE = "move";
     public static final String USE = "use";
     public static final String DIG = "dig";

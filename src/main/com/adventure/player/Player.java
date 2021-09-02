@@ -38,7 +38,7 @@ public class Player {
 
     /**
      * Sprint 2 Module 1
-     * The canOpenDoor is calculated by taking the level and dividing it by 2. If the result is greater than 2, the
+     * The canOpenDoor is calculated by taking the player's level and dividing it by 2. If the result is greater than 2, the
      * player can open doors.
      * @return true if the player's level is enough to open the door.
      */

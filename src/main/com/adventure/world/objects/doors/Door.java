@@ -5,8 +5,8 @@ import main.com.adventure.world.objects.keys.Key;
 
 /**
  * Doors can be open or locked. That state should be maintained in this class.
- * A doors level cannot change once the class is created. You should create a multiple constructors that allow the Door
- * to be created:
+ * A door's level cannot be changed once the class has been created. You should create multiple constructors that allow
+ * the Door to be created:
  * 1. without any inputs (i.e. default parameters)
  * 2. a level and an open/locked state
  *
@@ -17,7 +17,7 @@ public class Door implements Tangible {
 
     private boolean isOpen = false;
 
-    //TODO Add level properties
+    //TODO Add a level property
 
     //TODO Add a default (i.e. no params) constructor here
 

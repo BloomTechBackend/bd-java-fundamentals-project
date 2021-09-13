@@ -1,4 +1,4 @@
-# Sprint 3 Module 1
+# Mastery Task 6 - Enumerating the Commands
 
 #### AppSettings Update
 Go to `AppSettings` and update the `Story` to `S3M1_TestDirections`.

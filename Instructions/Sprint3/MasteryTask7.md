@@ -1,4 +1,4 @@
-# Mastery Task 7 - Loop
+# Mastery Task 7 - Loops
 
 ### App Update
 Inside of `AppSettings`, update the story `S3M2_MonsterScene`

@@ -69,7 +69,6 @@ dependencies {
     implementation 'org.mockito:mockito-core:3.11.2'
     implementation files("$rootDir/LibrariesAndUtilities/ATAResources.jar")
     implementation files("$rootDir/LibrariesAndUtilities/core-3.3.7.jar")
-    implementation project('LibrariesAndUtilities:LessonPlanResources')
 }
 
 test {

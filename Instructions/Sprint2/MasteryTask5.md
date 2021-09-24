@@ -1,7 +1,7 @@
 # Master Task 5 - UML Diagraming
 
 ### AppSettings Update
-Go to `AppSettings` and update the `story` to `S2M4_DigEscape`.
+Go to `com.adventure.settings.AppSettings` and update the `story` to `S2M4_DigEscape`.
 
 ## UML
 You will be implementing the following UML diagram: https://drive.google.com/file/d/1EiE6GRljkjiIay1YqXZjpXIW2chhs5GJ/view?usp=sharing

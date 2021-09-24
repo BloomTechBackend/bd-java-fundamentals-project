@@ -1,7 +1,7 @@
 # Master Task 2 - Class Properties
 
 ### AppSettings Update
-Go to `AppSettings` and update the `story` to `S2M1_CaveEscape`.
+Go to `com.adventure.settings.AppSettings` and update the `story` to `S2M1_CaveEscape`.
 
 ## Properties
 A property is a place to store a value. For example, a `Person` has the property `age`, which can store the value `30`. Then you can reference that value by simply stating `age`. If you need to change the `age` because it's the person's birthday, you can simply assign a new value (`31`) to the property. 

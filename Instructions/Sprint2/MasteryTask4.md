@@ -1,7 +1,7 @@
 # Mastery Task 4 - Constructing Classes
 
 ### AppSettings Update
-Go to `AppSettings` and update the `story` to `S2M3_HouseAndCave`.
+Go to `com.adventure.settings.AppSettings` and update the `story` to `S2M3_HouseAndCave`.
 
 ## Constructors
 Constructors allow us to instantiate (i.e. make a concrete object of) a class. In our game, we have keys and doors. The class files for these objects are mostly built out, but they are missing their constructors and some important properties.

@@ -1,7 +1,7 @@
 # Mastery Task 7 - Loops
 
 ### App Update
-Inside of `AppSettings`, update the story `S3M2_MonsterScene`
+Inside of `com.adventure.settings.AppSettings`, update the story `S3M2_MonsterScene`
 
 ## Loops
 We will be building an automated combat system that will involve loops as well as a file reader.

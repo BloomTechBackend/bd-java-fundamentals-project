@@ -1,7 +1,7 @@
 # Mastery Task 6 - Enumerating the Commands
 
 #### AppSettings Update
-Go to `AppSettings` and update the `Story` to `S3M1_TestDirections`.
+Go to `com.adventure.settings.AppSettings` and update the `Story` to `S3M1_TestDirections`.
 
 ## Enums
 We will be using enums to improve how the game processes directions.

@@ -8,10 +8,9 @@ To run tests, you can do this inside of IntelliJ by opening the desired test fil
 
 ![Testing within IntelliJ](https://github.com/bqmackay/bd_u1_student_project/blob/main/Instructions/Images/IDE_Test_Instructions.png)
 
-You can also run tests in your terminal by running the following:
+You can also run tests in your terminal. Here's an example test command:
 
 ```
-./gradlew test --tests com.adventure.sprint<sprint_number>.S<sprint_number>M<module_number>Test
 ./gradlew test --tests com.adventure.sprint1.S1M2Test
 ```
 

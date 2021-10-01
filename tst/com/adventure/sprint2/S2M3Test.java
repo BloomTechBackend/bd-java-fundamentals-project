@@ -19,7 +19,7 @@ public class S2M3Test {
         }
 
         try {
-            Key.class.getConstructor(int.class);
+            Key.class.getConstructor(int.class, String.class);
         } catch (NoSuchMethodException e) {
             assertFalse(true, "Key should have a constructor that takes an int");
         }

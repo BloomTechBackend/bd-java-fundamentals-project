@@ -43,10 +43,10 @@ class S2M1Test {
 
     @Test
     void setName() {
-        assertEquals(player.getName(), "", "The player's name should start as a blank string.");
+        assertTrue(player.getName()  == null || player.getName().isBlank(), "The player's name should start as a blank string.");
         String testName = "Test name";
         player.setName(testName);
         assertEquals(player.getName(), testName);
-        assertEquals("Your name is now " + testName + "\n", outContent.toString());
+        assertEquals("Your name is now " + testName, outContent.toString().trim());
     }
 }

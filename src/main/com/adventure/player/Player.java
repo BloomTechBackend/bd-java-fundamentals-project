@@ -9,12 +9,12 @@ import main.com.adventure.world.objects.keys.Key;
 public class Player {
 
     public int level = 5;
-    //TODO Add name variable here
     private int currentLocationIndex = AppSettings.getStartingLocation();
     private Key key;
     private Shovel shovel;
     private int power = 1;
     private int health = 10;
+    private String name = null;
 
     /**
      * Sprint 2 Module 1
@@ -23,7 +23,8 @@ public class Player {
      * @param newName - the player's name that will be saved
      */
     public void setName(String newName) {
-
+        this.name = newName;
+        System.out.println("Your name is now " + newName);
     }
 
     /**
@@ -33,7 +34,7 @@ public class Player {
      * @return The name of the player
      */
     public String getName() {
-        return null;
+        return this.name;
     }
 
     /**

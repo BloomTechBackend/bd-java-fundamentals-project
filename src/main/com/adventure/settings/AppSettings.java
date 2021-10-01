@@ -3,7 +3,7 @@ package main.com.adventure.settings;
 public class AppSettings {
 
     /** You will update this property for each project. **/
-    public static final Story story = Story.S1M1_Beginning;
+    public static final Story story = Story.S1M2_Beginning;
 
     public enum Story {
         TestScene,

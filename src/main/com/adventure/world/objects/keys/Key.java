@@ -15,6 +15,16 @@ import main.com.adventure.world.objects.Tangible;
 
 public class Key implements Tangible {
 
+    /**
+     * Key constructor that takes level.
+     * @param level the key's level
+     */
+    public Key(int level) {
+
+    }
+
+    public Key() {}
+
     //TODO variable for level and name needed here
 
     //TODO Add default (i.e. no params) constructor here

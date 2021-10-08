@@ -13,7 +13,7 @@ import java.util.List;
 public class OutsideCaveScene implements Scene {
 
     Door door = DoorFactory.buildDoor(false, 2);
-    Key key = new Key();
+    Key key = new Key(1);
 
     @Override
     public String getDescription() {

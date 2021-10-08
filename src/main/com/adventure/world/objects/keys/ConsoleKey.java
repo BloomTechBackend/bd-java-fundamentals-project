@@ -13,7 +13,7 @@ public class ConsoleKey extends Key {
      * @param l - receives a callback when this key is used.
      */
     public ConsoleKey(TangibleListener l) {
-        super();
+        super(1);
         this.listener = l;
     }
 

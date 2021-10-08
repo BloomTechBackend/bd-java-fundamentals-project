@@ -5,6 +5,7 @@ import main.com.adventure.world.objects.keys.Key;
 import main.com.adventure.world.objects.keys.OmniKey;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * The OmniDoor is a door whose lock is a set of 5 pins. Each pin
@@ -57,6 +58,13 @@ public class OmniDoor implements Tangible {
      */
     public void unlock(OmniKey key) {
         //TODO Complete the function
+        for (int i = 0; i < key.pins.length; i++) {
+            if (key.pins[i] != this.pins[i]) {
+                randomizePins();
+                return;
+            }
+        }
+        isOpen = true;
     }
 
     /**
@@ -115,5 +123,12 @@ public class OmniDoor implements Tangible {
     @Override
     public void use() {
 
+    }
+
+    private void randomizePins() {
+        Random random = new Random();
+        for (boolean pin : pins) {
+            pin = random.nextBoolean();
+        }
     }
 }

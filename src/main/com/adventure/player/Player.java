@@ -52,8 +52,6 @@ public class Player {
 
 
     /**
-     * Scene 1 ---|--- Scene 2 ----- Scene 3
-     *
      * Sprint 2 Module 2
      * The move function will take two parameters: a direction and a list of possible directions. It will be up to this
      * function to determine if the direction is valid. If it is, the currentLocationIndex will increment (EAST) or
@@ -67,7 +65,7 @@ public class Player {
      * @return true if the move is executed. Otherwise, false.
      */
     public boolean move(String direction, boolean isValid) {
-        return false;
+        return true;
     }
 
     /**

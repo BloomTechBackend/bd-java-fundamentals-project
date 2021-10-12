@@ -127,8 +127,8 @@ public class OmniDoor implements Tangible {
 
     private void randomizePins() {
         Random random = new Random();
-        for (boolean pin : pins) {
-            pin = random.nextBoolean();
+        for (int i = 0; i < pinCount; i++) {
+            pins[i] = random.nextBoolean();
         }
     }
 }

@@ -79,7 +79,7 @@ public class S2M2Test {
 
         assertFalse(player.move(Direction.EAST, false));
         assertEquals(player.getCurrentLocation(), oldValue);
-        assertEquals("EAST is not a valid direction".trim(), outContent.toString().trim());
+        assertEquals("EAST is not a valid direction", outContent.toString().trim());
     }
 
     @Test

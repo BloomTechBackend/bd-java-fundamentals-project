@@ -118,7 +118,7 @@ public class S3M3Test {
         //copy the door's pins
         initialKey.useItem(door);
         //ensure (reasonably) the new copy is never randomly the same as before
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 10; i++) {
             //randomize the door's pins
             door.unlock(controlKey);
             //copy the door's new pins

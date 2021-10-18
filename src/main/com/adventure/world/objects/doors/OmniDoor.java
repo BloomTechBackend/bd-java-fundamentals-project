@@ -11,7 +11,7 @@ import java.util.Random;
  * The OmniDoor is a door whose lock is a set of 5 pins. Each pin
  * is either up or down. The OmniDoor can only be opened by an
  * OmniKey who's pins are configured the same as the OmniDoor's pins.
- *
+
  * If a player tries to open an OmniDoor with an OmniKey and the key is
  * improperly configured, the OmniDoor will randomize its pins.
  *
@@ -32,7 +32,7 @@ public class OmniDoor implements Tangible {
     public boolean isOpen = false;
 
     /**
-     * The pins, represented as booleans.
+     * The pins, represented as booleans (true = up, false = down).
      */
     private final boolean[] pins = new boolean[pinCount];
 
@@ -51,19 +51,26 @@ public class OmniDoor implements Tangible {
      *
      *      "The door is unlocked!"
      *
-     * If a pin is not correct, then randomizePins will be called and the
-     * method is immediately stopped.
+     * If a pin is not correct, then randomizePins is called and the
+     * look is immediately stopped.
      *
      * @param key - the key that will be used to attempt to unlock the door
      */
     public void unlock(OmniKey key) {
         //TODO Complete the function
+        for (int i = 0; i < key.pins.length; i++) {
+            if (key.pins[i] != this.pins[i]) {
+                randomizePins();
+                return;
+            }
+        }
+        isOpen = true;
     }
 
     /**
      * The method will check each pin from the key with the pin
      * in the lock. When the first incorrect pin is found, that
-     * index will be returned immediately.
+     * index is returned immediately.
      *
      * For example, if the pin at
      * index 1 is incorrect, then this method will return 1 and

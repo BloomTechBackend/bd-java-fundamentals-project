@@ -21,20 +21,12 @@ public class OmniKey implements Tangible {
      * The only item the OmniKey can be used with is an OmniDoor. When the OmniKey receives an OmniDoor, the OmniKey
      * will automatically configure itself to the OmniDoor, making the OmniKey become a valid key for the door.
      * Note that this does NOT open the door; it merely configures the key so it can open the door.
-     *
-     * If canUse returns true, make sure to cast the door to OmniDoor.
-     *
      * @param door - If it's an OmniDoor, this key will configure itself to it. Otherwise, inform the user
      *             that this key can only be used with OmniDoors and do nothing more.
      */
     @Override
     public void useItem(Tangible door) {
-        //check if the door is an OmniDoor
-        if (door instanceof OmniDoor) {
-
-        } else {
-
-        }
+        //TODO Complete the function
     }
 
     @Override

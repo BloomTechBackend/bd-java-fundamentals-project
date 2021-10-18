@@ -13,8 +13,9 @@ public class SceneDescriptionFileReader {
      * This function has a parameter that's of class BufferedReader. BufferedReader stores the contents
      * of a file and can read the contents one line at a time. You can get the next line by
      * using the method readLine(). The BufferedReader doesn't know how many lines it has,
-     * so instead, you need keep calling readLine until it returns null. Make sure you save off
-     * the contents of each readLine call, because you can't go backwards, only forwards.
+     * so instead of relying on a line count, you must call readLine until it returns null.
+     * Make sure you save off the contents of each readLine call, because you can't go backwards,
+     * only forwards.
      *
      * For example, let's say the file contains the following:
      *
@@ -35,8 +36,13 @@ public class SceneDescriptionFileReader {
      */
 
     private String produceTextFromBufferedReader(BufferedReader br) throws IOException {
-        //remove this line
-        throw new IOException();
+        StringBuilder buffer = new StringBuilder();
+        String line = br.readLine();
+        while (line != null) {
+            buffer.append(line + "\n");
+            line = br.readLine();
+        }
+        return buffer.toString();
     }
 
     ////// DO NOT CHANGE ANYTHING BELOW THIS LINE /////

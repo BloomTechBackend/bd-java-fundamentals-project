@@ -14,7 +14,6 @@ public class Player {
     private Shovel shovel;
     private int power = 1;
     private int health = 10;
-    private String name = null;
 
     /**
      * Sprint 2 Module 1
@@ -23,8 +22,7 @@ public class Player {
      * @param newName - the player's name that will be saved
      */
     public void setName(String newName) {
-        this.name = newName;
-        System.out.println("Your name is now " + newName);
+
     }
 
     /**
@@ -34,13 +32,13 @@ public class Player {
      * @return The name of the player
      */
     public String getName() {
-        return this.name;
+        return "";
     }
 
     /**
      * Sprint 2 Module 1
-     * The canOpenDoor is calculated by taking the player's level and dividing it by 2. If the result is greater than 2, the
-     * player can open doors.
+     * The canOpenDoor is calculated by taking the player's level and dividing it by 2.
+     * If the result is greater than 2, the player can open doors.
      * @return true if the player's level is enough to open the door.
      */
     public boolean canOpenDoor() {
@@ -53,24 +51,30 @@ public class Player {
 
     /**
      * Sprint 2 Module 2
-     * The move function will take two parameters: a direction and a list of possible directions. It will be up to this
-     * function to determine if the direction is valid. If it is, the currentLocationIndex will increment (EAST) or
-     * decrement (WEST) based on the direction. If the direction is invalid for any reason, the program should print
-     * "{DIRECTION} is not a valid direction" to the console.
+     * The move function takes two parameters: a direction string and an isPossible boolean. The boolean isPossible
+     * tells us if that direction is valid at this point in the game. It will be up to this function to determine if the
+     * direction should be processed.
      *
-     * You should also return true if the move is executed. Otherwise, return false.
+     * If the direction should be processed, the currentLocationIndex will increment by 1 if the direction is EAST,
+     * or decrement by 1 if the direction is WEST.
+     *
+     * If the direction is invalid for any reason, the program should print "{DIRECTION} is not a valid direction" to
+     * the console.
+     *
+     * You should return true if the move is executed. Otherwise, return false.
      *
      * @param direction - the direction the player wishes to go
-     * @param isValid - the possible directions
+     * @param isPossible - true if the player can move that direction in the game. Otherwise, false.
      * @return true if the move is executed. Otherwise, false.
      */
-    public boolean move(String direction, boolean isValid) {
+    public boolean move(String direction, boolean isPossible) {
         return true;
     }
 
     /**
      * Sprint 3 Module 2
-     * Will increase the players power based on the item that is passed in.
+     * Will increase the players power to the power of the item that is passed in.
+     * For example, if the player's power is 1 and the weapon is 5, the player's power is now 5.
      * @param item - the weapon that will be used to adjust the player's power.
      */
     public void setWeapon(Weapon item) {
@@ -101,7 +105,7 @@ public class Player {
 
     /**
      * Sprint 3 Module 3
-     * Prints the inventory.
+     * Prints the backpack's inventory.
      */
     public void printItems() {
         //TODO Complete this function in Sprint 3 Module 3

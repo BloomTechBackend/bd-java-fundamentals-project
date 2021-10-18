@@ -121,22 +121,30 @@ public class GameController {
     }
 
     private void applyCommand(Command command) {
-        if (command.getVerb().equalsIgnoreCase(Command.LOOK)) {
-            describeCurrentScene();
-        } else if (command.getVerb().equalsIgnoreCase(Command.MOVE)) {
-            move(command.getObjectName());
-        } else if (command.getVerb().equalsIgnoreCase(Command.HELP)) {
-            printHelp();
-        } else if (command.getVerb().equalsIgnoreCase(Command.USE)) {
-            use(command.getObjectName());
-        } else if (command.getVerb().equalsIgnoreCase(Command.DIG)) {
-            dig();
-        } else if (command.getVerb().equalsIgnoreCase(Command.EXAMINE)) {
-            examine(command.getObjectName());
-        } else if (command.getVerb().equalsIgnoreCase(Command.TAKE)) {
-            take(command.getObjectName());
-        } else {
-            printInvalidCommand();
+        switch (command.getVerb()) {
+            case LOOK:
+                describeCurrentScene();
+                break;
+            case MOVE:
+                move(command.getObjectName());
+                break;
+            case HELP:
+                printHelp();
+                break;
+            case USE:
+                use(command.getObjectName());
+                break;
+            case DIG:
+                dig();
+                break;
+            case EXAMINE:
+                examine(command.getObjectName());
+                break;
+            case TAKE:
+                take(command.getObjectName());
+                break;
+            default:
+                printInvalidCommand();
         }
     }
 

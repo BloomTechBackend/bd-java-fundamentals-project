@@ -12,7 +12,7 @@ public class Backpack {
     private final Tangible[] items = new Tangible[MAX_CAPACITY];
 
     /**
-     * Add an item to the end of the backpack array and only if there's enough room in the backpack.
+     * Adds an item to the backpack array only if there's an empty space in the array.
      * @param item - item to add to the backpack array.
      * @return - true if the item is added. Otherwise, false.
      */
@@ -32,7 +32,7 @@ public class Backpack {
     }
 
     /**
-     * Checks if the given item exists in the backpack and removes it if it is.
+     * Checks if the given item exists in the backpack based on the item's name, and removes the item if it's found.
      * @param item - item to remove
      * @return - true if the item was removed. Otherwise, false.
      */

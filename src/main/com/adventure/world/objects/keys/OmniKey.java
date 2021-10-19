@@ -26,7 +26,9 @@ public class OmniKey implements Tangible {
      */
     @Override
     public void useItem(Tangible door) {
-        //TODO Complete the function
+        if (door instanceof OmniDoor) {
+            //TODO Complete the function
+        }
     }
 
     @Override

@@ -58,13 +58,6 @@ public class OmniDoor implements Tangible {
      */
     public void unlock(OmniKey key) {
         //TODO Complete the function
-        for (int i = 0; i < key.pins.length; i++) {
-            if (key.pins[i] != this.pins[i]) {
-                randomizePins();
-                return;
-            }
-        }
-        isOpen = true;
     }
 
     /**

@@ -121,19 +121,19 @@ public class GameController {
     }
 
     private void applyCommand(Command command) {
-        if (command.getVerb().equalsIgnoreCase(Command.LOOK)) {
+        if (command.getVerb().equalsIgnoreCase(CommandConstants.LOOK)) {
             describeCurrentScene();
-        } else if (command.getVerb().equalsIgnoreCase(Command.MOVE)) {
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.MOVE)) {
             move(command.getObjectName());
-        } else if (command.getVerb().equalsIgnoreCase(Command.HELP)) {
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.HELP)) {
             printHelp();
-        } else if (command.getVerb().equalsIgnoreCase(Command.USE)) {
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.USE)) {
             use(command.getObjectName());
-        } else if (command.getVerb().equalsIgnoreCase(Command.DIG)) {
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.DIG)) {
             dig();
-        } else if (command.getVerb().equalsIgnoreCase(Command.EXAMINE)) {
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.EXAMINE)) {
             examine(command.getObjectName());
-        } else if (command.getVerb().equalsIgnoreCase(Command.TAKE)) {
+        } else if (command.getVerb().equalsIgnoreCase(CommandConstants.TAKE)) {
             take(command.getObjectName());
         } else {
             printInvalidCommand();

@@ -54,6 +54,6 @@ public class S3M2Test {
         assertEquals("Roses are red\n" +
                 "Violets are blue\n" +
                 "Unexpected bracket\n" +
-                "On line 32\n".trim(), result.trim());
+                "On line 32".trim(), result.trim());
     }
 }

@@ -6,11 +6,11 @@ import main.com.adventure.world.objects.Tangible;
  * A key opens a locked door. More specifically, keys work only on doors that share their level.
  * For example, if a key is level 1, it can only open doors that are also level 1.
  *
- * A key's level cannot change once the object is instantiated. You should create two constructors that allow
- * the Key to be created:
+ * A key's level cannot change once the object is instantiated. You should create the following constructors that take
+ * the following parameters:
  * 1. without any inputs (i.e. default parameters)
- * 2. A level (int) and a name (string)
- *
+ * 2. a level (int)
+ * 3. a level (int) and a name (string)
  */
 
 public class Key implements Tangible {
@@ -18,6 +18,8 @@ public class Key implements Tangible {
     //TODO variable for level and name needed here
 
     //TODO Add default (i.e. no params) constructor here
+
+    //TODO add constructor that takes a level, and saves it
 
     //TODO add constructor that takes a level and name, and saves it
 

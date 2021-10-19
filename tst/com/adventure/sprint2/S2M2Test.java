@@ -4,12 +4,14 @@ import main.com.adventure.GameInputProcessor;
 import main.com.adventure.player.Player;
 import main.com.adventure.settings.AppSettings;
 import main.com.adventure.settings.Command;
+import main.com.adventure.settings.CommandConstants;
 import main.com.adventure.world.Direction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
@@ -35,8 +37,8 @@ public class S2M2Test {
         when(processor.getNextCommand()).thenCallRealMethod();
 
         Command command = processor.getNextCommand();
-        assertEquals(command.getVerb(), Command.MOVE);
-        assertEquals(command.getObjectName(), "west");
+        assertEquals(CommandConstants.MOVE, command.getVerb());
+        assertEquals("west", command.getObjectName());
     }
 
     @Test
@@ -51,8 +53,8 @@ public class S2M2Test {
         when(processor.getNextCommand()).thenCallRealMethod();
         Command command = processor.getNextCommand();
 
-        assertEquals(command.getVerb(), Command.MOVE);
-        assertEquals(command.getObjectName(), "east");
+        assertEquals(CommandConstants.MOVE, command.getVerb());
+        assertEquals("east", command.getObjectName().toLowerCase());
     }
 
     @Test
@@ -63,12 +65,12 @@ public class S2M2Test {
 
         GameInputProcessor processor = mock(GameInputProcessor.class);
 
-        when(processor.prompt()).thenReturn(Command.LOOK + " other content that should not be included");
+        when(processor.prompt()).thenReturn(CommandConstants.LOOK + " other content that should not be included");
         when(processor.getNextCommand()).thenCallRealMethod();
         Command command = processor.getNextCommand();
 
-        assertEquals(command.getVerb(), Command.LOOK);
-        assertEquals(command.getObjectName(), "");
+        assertEquals(CommandConstants.LOOK, command.getVerb());
+        assertEquals("", command.getObjectName());
     }
 
     @Test
@@ -79,7 +81,7 @@ public class S2M2Test {
 
         assertFalse(player.move(Direction.EAST, false));
         assertEquals(player.getCurrentLocation(), oldValue);
-        assertEquals("EAST is not a valid direction", outContent.toString().trim());
+        assertEquals("EAST is not a valid direction".toLowerCase(), outContent.toString().trim().toLowerCase());
     }
 
     @Test
@@ -89,7 +91,7 @@ public class S2M2Test {
         var oldValue = player.getCurrentLocation();
 
         assertTrue(player.move(Direction.WEST, true));
-        assertEquals(player.getCurrentLocation() + 1, oldValue);
+        assertEquals(oldValue, player.getCurrentLocation() + 1);
     }
 
     @Test
@@ -99,6 +101,6 @@ public class S2M2Test {
         var oldValue = player.getCurrentLocation();
 
         assertTrue(player.move(Direction.EAST, true));
-        assertEquals(player.getCurrentLocation() - 1, oldValue);
+        assertEquals(oldValue, player.getCurrentLocation() - 1);
     }
 }

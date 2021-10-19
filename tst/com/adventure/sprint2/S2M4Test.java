@@ -42,6 +42,6 @@ public class S2M4Test {
         door.useItem(key);
         assertTrue(door.isOpen());
 
-        assertEquals(scene.getPossibleDirections(), new ArrayList(List.of(Direction.EAST)));
+        assertEquals(new ArrayList(List.of(Direction.EAST)), scene.getPossibleDirections());
     }
 }

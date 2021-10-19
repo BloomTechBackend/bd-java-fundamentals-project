@@ -2,16 +2,6 @@ package main.com.adventure.settings;
 
 public class Command {
 
-    public static final String TAKE = "take";
-    public static final String MOVE = "move";
-    public static final String USE = "use";
-    public static final String DIG = "dig";
-    public static final String EXAMINE = "examine";
-    public static final String LOOK = "look";
-    public static final String CHECK_ITEMS = "check items";
-    public static final String INVALID = "invalid";
-    public static final String HELP = "help";
-
     private String verb;
     private String objectName;
 

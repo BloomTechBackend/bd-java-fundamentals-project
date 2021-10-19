@@ -1,6 +1,7 @@
 package main.com.adventure;
 
 import main.com.adventure.settings.Command;
+import main.com.adventure.settings.CommandConstants;
 
 public class GameInputProcessor {
 
@@ -53,10 +54,10 @@ public class GameInputProcessor {
     }
 
     private Command processCommand(String input) {
-        if (input.contains(Command.MOVE) ||
-                input.contains(Command.USE) ||
-                input.contains(Command.TAKE) ||
-                input.contains(Command.EXAMINE)
+        if (input.contains(CommandConstants.MOVE) ||
+                input.contains(CommandConstants.USE) ||
+                input.contains(CommandConstants.TAKE) ||
+                input.contains(CommandConstants.EXAMINE)
         ) {
             return buildCommandWithObject(input);
         } else {

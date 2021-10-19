@@ -28,17 +28,17 @@ class S2M1Test {
     @Test
     void canOpenDoor() {
         checkPlayerLevel();
-        assertEquals(player.canOpenDoor(), true, "The player should be able to open the door at level " + player.level);
+        assertEquals(true, player.canOpenDoor(), "The player should be able to open the door at level " + player.level);
         checkPlayerLevel();
 
         player.level = 4;
-        assertEquals(player.canOpenDoor(), false, "The player should not be able to open the door at level " + player.level);
+        assertEquals(false, player.canOpenDoor(), "The player should not be able to open the door at level " + player.level);
 
         player.level = 0;
-        assertEquals(player.canOpenDoor(), false, "The player should not be able to open the door at level " + player.level);
+        assertEquals(false, player.canOpenDoor(), "The player should not be able to open the door at level " + player.level);
 
         player.level = 10;
-        assertEquals(player.canOpenDoor(), true, "The player should be able to open the door at level " + player.level);
+        assertEquals(true, player.canOpenDoor(), "The player should be able to open the door at level " + player.level);
     }
 
     @Test
@@ -46,7 +46,7 @@ class S2M1Test {
         assertTrue(player.getName() == null || player.getName().isBlank(), "The player's name should start as a blank or null string.");
         String testName = "Test name";
         player.setName(testName);
-        assertEquals(player.getName(), testName);
-        assertEquals("Your name is now " + testName, outContent.toString().trim());
+        assertEquals(testName, player.getName());
+        assertEquals(String.format("Your name is now %s", testName), outContent.toString().trim());
     }
 }

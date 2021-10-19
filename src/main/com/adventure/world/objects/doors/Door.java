@@ -10,7 +10,7 @@ import main.com.adventure.world.objects.keys.Key;
  * 1. without any inputs (i.e. default parameters)
  * 2. a level and an open/locked state
  *
- * The default values for a door are level = 1 and isOpen = false
+ * The default values for a door are level = 0 and isOpen = false
  */
 
 public class Door implements Tangible {

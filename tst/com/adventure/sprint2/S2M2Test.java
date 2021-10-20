@@ -9,7 +9,9 @@ import main.com.adventure.world.Direction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Locale;
 
@@ -24,6 +26,28 @@ public class S2M2Test {
     @BeforeEach
     public void setup() {
         System.setOut(new PrintStream(outContent));
+    }
+
+    @Test
+    public void testPrompt() {
+        GameInputProcessor processor = new GameInputProcessor();
+        String input = "hello world";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+
+        System.setIn(in);
+
+        assertEquals(input, processor.prompt());
+    }
+
+    @Test
+    public void testPrompt2() {
+        GameInputProcessor processor = new GameInputProcessor();
+        String input = "Another hello world";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+
+        System.setIn(in);
+
+        assertEquals(input, processor.prompt());
     }
 
     @Test
@@ -55,6 +79,22 @@ public class S2M2Test {
 
         assertEquals(CommandConstants.MOVE, command.getVerb());
         assertEquals("east", command.getObjectName().toLowerCase());
+    }
+
+    @Test
+    public void testInvalidMoveInput() {
+        if (AppSettings.story.ordinal() >= AppSettings.Story.S3M1_TestDirections.ordinal()) {
+            return;
+        }
+
+        GameInputProcessor processor = mock(GameInputProcessor.class);
+
+        when(processor.prompt()).thenReturn("move");
+        when(processor.getNextCommand()).thenCallRealMethod();
+        Command command = processor.getNextCommand();
+
+        assertEquals(CommandConstants.MOVE, command.getVerb());
+        assertEquals("", command.getObjectName().toLowerCase());
     }
 
     @Test

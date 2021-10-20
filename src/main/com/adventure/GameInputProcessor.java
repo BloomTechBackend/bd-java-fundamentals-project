@@ -8,7 +8,7 @@ import java.util.Locale;
 public class GameInputProcessor {
 
     /**
-     * Starts the prompt process to the user.
+     * Asks the user for their next command.
      * @return the response from the user.
      */
     public String prompt() {
@@ -26,7 +26,7 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-        return new Command("", "");
+        return new Command("");
     }
 
     /**
@@ -36,6 +36,12 @@ public class GameInputProcessor {
      *  "use key"
      *  "examine door"
      *  "move west"
+     *
+     * You should also account for incomplete actions (i.e. the object is missing). In that case, you should return a
+     * blank object.
+     * Example bad input:
+     *  "move "
+     *
      * @param input - the input from the user
      * @return - the Command object with the proper verb and object
      */

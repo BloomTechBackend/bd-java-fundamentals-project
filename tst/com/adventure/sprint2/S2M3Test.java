@@ -19,9 +19,15 @@ public class S2M3Test {
         }
 
         try {
-            Key.class.getConstructor(int.class, String.class);
+            Key.class.getConstructor(int.class);
         } catch (NoSuchMethodException e) {
             assertFalse(true, "Key should have a constructor that takes an int");
+        }
+
+        try {
+            Key.class.getConstructor(int.class, String.class);
+        } catch (NoSuchMethodException e) {
+            assertFalse(true, "Key should have a constructor that takes an int and a String");
         }
     }
 
@@ -41,8 +47,19 @@ public class S2M3Test {
     }
 
     @Test
+    public void testKeyFactory() {
+        int keyLevel = 2;
+        String keyName = "test_key";
+
+        Key key = KeyFactory.buildKey(keyLevel, keyName);
+
+        assertEquals(keyLevel, key.getLevel());
+        assertEquals(keyName, key.getName());
+    }
+
+    @Test
     public void testKeyAndDoor() {
-        Key key = KeyFactory.getKey(1, "key");
+        Key key = KeyFactory.buildKey(1, "key");
 
         Door door = DoorFactory.buildDoor(false, 1);
         door.useItem(key);
@@ -53,7 +70,7 @@ public class S2M3Test {
         assertFalse(door.isOpen());
 
         door.setIsOpen(false);
-        key = KeyFactory.getKey(2, "key");
+        key = KeyFactory.buildKey(2, "key");
         door.useItem(key);
         assertTrue(door.isOpen());
     }

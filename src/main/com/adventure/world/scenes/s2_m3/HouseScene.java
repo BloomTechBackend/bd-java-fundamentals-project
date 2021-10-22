@@ -11,7 +11,7 @@ import java.util.List;
 
 public class HouseScene implements Scene {
 
-    Key key = KeyFactory.getKey(2, "key");
+    Key key = KeyFactory.buildKey(2, "key");
 
     @Override
     public String getDescription() {

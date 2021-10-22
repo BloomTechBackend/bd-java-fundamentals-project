@@ -31,8 +31,8 @@ public class S3M3Test {
 
     @Test
     public void testBackpackAddRemoveItem() {
-        Key key = KeyFactory.getKey(1, "1");
-        Key secondKey = KeyFactory.getKey(2, "2");
+        Key key = KeyFactory.buildKey(1, "1");
+        Key secondKey = KeyFactory.buildKey(2, "2");
         Backpack backpack = new Backpack();
         backpack.addItem(key);
         backpack.addItem(secondKey);
@@ -48,12 +48,12 @@ public class S3M3Test {
     public void testBackpackLimit() {
         final String invalidKey = "Invalid";
         Backpack backpack = new Backpack();
-        backpack.addItem(KeyFactory.getKey(1, "1"));
-        backpack.addItem(KeyFactory.getKey(2, "2"));
-        backpack.addItem(KeyFactory.getKey(3, "3"));
-        backpack.addItem(KeyFactory.getKey(4, "4"));
-        backpack.addItem(KeyFactory.getKey(5, "5"));
-        backpack.addItem(KeyFactory.getKey(42, invalidKey));
+        backpack.addItem(KeyFactory.buildKey(1, "1"));
+        backpack.addItem(KeyFactory.buildKey(2, "2"));
+        backpack.addItem(KeyFactory.buildKey(3, "3"));
+        backpack.addItem(KeyFactory.buildKey(4, "4"));
+        backpack.addItem(KeyFactory.buildKey(5, "5"));
+        backpack.addItem(KeyFactory.buildKey(42, invalidKey));
         backpack.printItems();
         assertFalse(outContent.toString().contains(invalidKey));
         assertTrue(outContent.toString().contains("5"));
@@ -71,8 +71,8 @@ public class S3M3Test {
 
     @Test
     public void testBackpackViaPlayer() {
-        Key key = KeyFactory.getKey(1, "1");
-        Key secondKey = KeyFactory.getKey(2, "2");
+        Key key = KeyFactory.buildKey(1, "1");
+        Key secondKey = KeyFactory.buildKey(2, "2");
         Player player = new Player();
         player.addItem(key);
         player.addItem(secondKey);

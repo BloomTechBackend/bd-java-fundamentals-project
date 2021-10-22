@@ -8,8 +8,8 @@ public class KeyFactory {
      * @param name - the key's name
      * @return a key
      */
-    public static Key getKey(int level, String name) {
-        //TODO Pass level into the key constructor when the proper constructor is built
+    public static Key buildKey(int level, String name) {
+        //TODO Pass level and name into the key constructor when the proper constructor is built
         Key key = new Key();
         return key;
     }

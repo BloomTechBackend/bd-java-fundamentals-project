@@ -12,7 +12,7 @@ import main.com.adventure.world.objects.Tangible;
  * 2. a level (int)
  * 3. a level (int) and a name (string)
  *
- * The default values for a door are level = 0 and name = "key"
+ * The default values for a door are level = 1 and name = "key"
  */
 
 public class Key implements Tangible {

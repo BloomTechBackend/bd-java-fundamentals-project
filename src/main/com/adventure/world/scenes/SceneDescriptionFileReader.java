@@ -10,10 +10,12 @@ import java.nio.charset.StandardCharsets;
 public class SceneDescriptionFileReader {
 
     /**
+     * The purpose of this function is to put the contents of a file into a string, and return the string.
+     *
      * This function has a parameter that's of class BufferedReader. BufferedReader stores the contents
-     * of a file and can read the contents one line at a time. You can get the next line by
-     * using the method readLine(). The BufferedReader doesn't know how many lines it has,
-     * so instead, you need keep calling readLine until it returns null. Make sure you save off
+     * of a file and can read one line of the content at a time. You can get the next line by
+     * using the method readLine(). The BufferedReader does not know how many lines it has,
+     * so you need keep calling readLine until it returns null. Make sure you save off
      * the contents of each readLine call, because you can't go backwards, only forwards.
      *
      * For example, let's say the file contains the following:
@@ -27,7 +29,8 @@ public class SceneDescriptionFileReader {
      * On the fifth call, readLine() will return null, which means it's the end of the file.
      *
      * Your job in this method is use a while loop to append each line of the file to a string.
-     * You will also need to add a new line escape character ("\n") AFTER EACH LINE.
+     * You will also need to add a new line escape character ("\n") after each line. The last line can omit
+     * the new line escape character.
      *
      * @param br - BufferedReader
      * @return the string of content read from the BufferedReader.

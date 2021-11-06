@@ -49,7 +49,7 @@ public class S3M2Test {
 
     @Test
     public void testReadFile() throws IOException {
-        var reader = new SceneDescriptionFileReader();
+        SceneDescriptionFileReader reader = new SceneDescriptionFileReader();
         String result = reader.printTextFromFile("TestScene.txt");
         assertEquals("Roses are red\n" +
                 "Violets are blue\n" +
@@ -59,7 +59,7 @@ public class S3M2Test {
 
     @Test
     public void testReadFile2() throws IOException {
-        var reader = new SceneDescriptionFileReader();
+        SceneDescriptionFileReader reader = new SceneDescriptionFileReader();
         String result = reader.printTextFromFile("TestScene2.txt");
         assertEquals("Two roads diverged in a yellow wood,\n" +
                 "And sorry I could not travel both\n" +

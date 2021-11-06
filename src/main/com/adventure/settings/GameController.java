@@ -14,6 +14,7 @@ import main.com.adventure.world.scenes.Scene;
 import main.com.adventure.world.scenes.SceneDescriptionNotFoundException;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class GameController {
@@ -51,7 +52,7 @@ public class GameController {
     }
 
     private void move(String direction) {
-        boolean isValid = getCurrentScene().getPossibleDirections().contains(direction);
+        boolean isValid = getCurrentScene().getPossibleDirections().contains(direction.toUpperCase(Locale.ROOT));
         if (player.move(direction, isValid)) {
             describeCurrentScene();
         }

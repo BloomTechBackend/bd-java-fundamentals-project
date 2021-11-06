@@ -51,7 +51,7 @@ public class Player {
 
     /**
      * Sprint 2 Module 2
-     * The move function takes two parameters: a direction string and an isPossible boolean. The boolean isPossible
+     * The move function takes two parameters: a direction string and an isValidDirection boolean. The boolean isValidDirection
      * tells us if that direction is valid at this point in the game. It will be up to this function to determine if the
      * direction should be processed.
      *
@@ -64,10 +64,10 @@ public class Player {
      * You should return true if the move is executed. Otherwise, return false.
      *
      * @param direction - the direction the player wishes to go
-     * @param isPossible - true if the player can move that direction in the game. Otherwise, false.
+     * @param isValidDirection - true if the player can move that direction in the game. Otherwise, false.
      * @return true if the move is executed. Otherwise, false.
      */
-    public boolean move(String direction, boolean isPossible) {
+    public boolean move(String direction, boolean isValidDirection) {
         return true;
     }
 

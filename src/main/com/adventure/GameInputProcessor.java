@@ -22,6 +22,9 @@ public class GameInputProcessor {
      * Example input:
      *  "help"
      *  "look"
+     *
+     *  Note: this command must stay private when running the tests
+     *
      * @param input - the input from the user
      * @return - the Command object with the proper verb and blank object
      */
@@ -31,16 +34,19 @@ public class GameInputProcessor {
 
     /**
      * Inputs that come into this method will have an object or objects that the action is acting on. You'll need to
-     * include the object as part of the Command object.
+     * include the object parameter as part of the Command object.
      * Example input:
      *  "use key"
      *  "examine door"
      *  "move west"
      *
-     * You should also account for incomplete actions (i.e. the object is missing). In that case, you should return a
-     * blank object.
+     * You should also account for incomplete actions (i.e. the object is missing). In that case, you should return an
+     * empty string for the object parameter.
      * Example bad input:
-     *  "move "
+     *  "move"
+     *  " use "
+     *
+     *  Note: this command must stay private when running the tests
      *
      * @param input - the input from the user
      * @return - the Command object with the proper verb and object

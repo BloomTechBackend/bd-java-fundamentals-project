@@ -72,8 +72,9 @@ public class S2M2Test {
         }
 
         GameInputProcessor processor = mock(GameInputProcessor.class);
+        String input = "move east";
 
-        when(processor.prompt()).thenReturn("move east");
+        when(processor.prompt()).thenReturn(input);
         when(processor.getNextCommand()).thenCallRealMethod();
         Command command = processor.getNextCommand();
 
@@ -117,7 +118,7 @@ public class S2M2Test {
     public void testPlayerMovementInvalid() {
         Player player = new Player();
 
-        var oldValue = player.getCurrentLocation();
+        int oldValue = player.getCurrentLocation();
 
         assertFalse(player.move(Direction.EAST, false));
         assertEquals(player.getCurrentLocation(), oldValue);
@@ -128,7 +129,7 @@ public class S2M2Test {
     public void testPlayerMovementWest() {
         Player player = new Player();
 
-        var oldValue = player.getCurrentLocation();
+        int oldValue = player.getCurrentLocation();
 
         assertTrue(player.move(Direction.WEST, true));
         assertEquals(oldValue, player.getCurrentLocation() + 1);
@@ -138,7 +139,7 @@ public class S2M2Test {
     public void testPlayerMovementEast() {
         Player player = new Player();
 
-        var oldValue = player.getCurrentLocation();
+        int oldValue = player.getCurrentLocation();
 
         assertTrue(player.move(Direction.EAST, true));
         assertEquals(oldValue, player.getCurrentLocation() - 1);

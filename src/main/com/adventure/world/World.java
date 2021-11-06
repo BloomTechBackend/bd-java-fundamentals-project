@@ -27,6 +27,7 @@ public class World {
                 scenes.add(SceneFactory.buildCaveEscapeScene());
                 break;
             case S2M2_TestDirections:
+            case S3M1_TestDirections:
                 listener = new ConsoleEscapeTangibleListener();
                 for (int i = 0; i < 3; i++) {
                     try {
@@ -70,7 +71,7 @@ public class World {
         if (directions == null || directions.isEmpty()) {
             return "";
         }
-        var response = directions.stream().reduce("You can MOVE", (current, element) -> {
+        String response = directions.stream().reduce("You can MOVE", (current, element) -> {
             if (directions.get(0).equals(element)) {
                 current += " " + element;
             } else if (directions.get(directions.size() - 1).equals(element)) {

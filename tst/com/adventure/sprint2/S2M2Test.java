@@ -99,6 +99,25 @@ public class S2M2Test {
     }
 
     @Test
+    public void testUseInput() {
+        if (AppSettings.story.ordinal() >= AppSettings.Story.S3M1_TestDirections.ordinal()) {
+            return;
+        }
+
+        String verb = CommandConstants.USE;
+        String object = "key";
+        GameInputProcessor processor = mock(GameInputProcessor.class);
+        
+        when(processor.prompt()).thenReturn(verb + " " + object);
+        when(processor.getNextCommand()).thenCallRealMethod();
+
+        Command command = processor.getNextCommand();
+
+        assertEquals(verb, command.getVerb());
+        assertEquals(object, command.getObjectName().toLowerCase());
+    }
+
+    @Test
     public void checkSimpleInput() {
         if (AppSettings.story.ordinal() >= AppSettings.Story.S3M1_TestDirections.ordinal()) {
             return;
@@ -144,4 +163,5 @@ public class S2M2Test {
         assertTrue(player.move(Direction.EAST, true));
         assertEquals(oldValue, player.getCurrentLocation() - 1);
     }
+
 }

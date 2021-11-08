@@ -98,9 +98,9 @@ public class Player {
      * @param item - the item you want to remove
      * @return the removed item
      */
-    public boolean removeItem(Tangible item) {
+    public Tangible removeItem(Tangible item) {
         //TODO Complete this function in Sprint 3 Module 3
-        return false;
+        return null;
     }
 
     /**

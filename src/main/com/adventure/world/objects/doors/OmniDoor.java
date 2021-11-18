@@ -45,9 +45,9 @@ public class OmniDoor implements Tangible {
     }
 
     /**
-     * This method first checks if each pin is correct. If all pins
-     * are correct, then the door will update isOpen's state and
-     * the following message will be sent to the console:
+     * This method first checks if the key's pins are correct. If each of the key's
+     * pins matches the door's pins at the same index, then the door will update
+     * isOpen's state and the following message will be sent to the console:
      *
      *      "The door is unlocked!"
      *

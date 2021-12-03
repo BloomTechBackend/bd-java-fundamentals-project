@@ -28,6 +28,7 @@ public class OmniKey implements Tangible {
     public void useItem(Tangible door) {
         if (door instanceof OmniDoor) {
             //TODO Complete the function
+            System.out.println("Your solution goes here");
         }
     }
 

@@ -24,7 +24,7 @@ public class HouseScene implements Scene {
 
     @Override
     public List<String> getPossibleDirections() {
-        ArrayList list = new ArrayList(List.of(Direction.EAST));
+        var list = new ArrayList(List.of(Direction.EAST));
         return list;
     }
 

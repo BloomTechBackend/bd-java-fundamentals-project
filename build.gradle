@@ -51,6 +51,10 @@ spotbugs {
     ignoreFailures = true
 }
 
+checkstyleMain {
+
+}
+
 spotbugsMain {
     reports {
         html {

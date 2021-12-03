@@ -51,9 +51,9 @@ public class Player {
 
     /**
      * Sprint 2 Module 2
-     * The move function takes two parameters: a direction string and an isValidDirection boolean. The boolean isValidDirection
-     * tells us if that direction is valid at this point in the game. It will be up to this function to determine if the
-     * direction should be processed.
+     * The move function takes two parameters: a direction string and an isValidDirection boolean.
+     * The boolean isValidDirection tells us if that direction is valid at this point in the game.
+     * It will be up to this function to determine if the direction should be processed.
      *
      * If the direction should be processed, the currentLocationIndex will increment by 1 if the direction is EAST,
      * or decrement by 1 if the direction is WEST.

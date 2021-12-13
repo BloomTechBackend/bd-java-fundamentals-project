@@ -21,13 +21,13 @@ public class World {
      */
     public World() {
         switch (AppSettings.story) {
-            case S1M2_Beginning:
+            case MT1_Beginning:
                 break;
-            case S2M1_CaveEscape:
+            case MT2_CaveEscape:
                 scenes.add(SceneFactory.buildCaveEscapeScene());
                 break;
-            case S2M2_TestDirections:
-            case S3M1_TestDirections:
+            case MT3_TestDirections:
+            case MT6_TestDirections:
                 listener = new ConsoleEscapeTangibleListener();
                 for (int i = 0; i < 3; i++) {
                     try {
@@ -37,7 +37,7 @@ public class World {
                     }
                 }
                 break;
-            case S2M3_HouseAndCave:
+            case MT4_HouseAndCave:
                 for (int i = 0; i < 3; i++) {
                     try {
                         scenes.add(SceneFactory.buildHouseAndCaveScene(i));
@@ -46,13 +46,13 @@ public class World {
                     }
                 }
                 break;
-            case S2M4_DigEscape:
+            case MT5_DigEscape:
                 scenes.add(SceneFactory.buildDigEscape());
                 break;
             case TestScene:
                 scenes.add(SceneFactory.buildTestScene());
                 break;
-            case S3M2_MonsterScene:
+            case MT7_MonsterScene:
                 scenes.add(SceneFactory.buildMonsterRing());
                 break;
             default:

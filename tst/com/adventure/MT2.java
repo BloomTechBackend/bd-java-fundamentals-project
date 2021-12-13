@@ -1,4 +1,4 @@
-package com.adventure.sprint2;
+package com.adventure;
 
 import main.com.adventure.player.Player;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,7 +9,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class S2M1Test {
+class MT2 {
 
     private Player player;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();

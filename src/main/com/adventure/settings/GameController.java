@@ -30,7 +30,7 @@ public class GameController {
      * Starts the game.
      */
     public void startGame() {
-        if (AppSettings.story == AppSettings.Story.S1M2_Beginning) {
+        if (AppSettings.story == AppSettings.Story.MT1_Beginning) {
             System.out.println("No crashes, so you win!");
             gameOver();
             return;
@@ -39,7 +39,7 @@ public class GameController {
         System.out.println("Entering the world...");
         describeCurrentScene();
 
-        if (AppSettings.story == AppSettings.Story.S2M1_CaveEscape) {
+        if (AppSettings.story == AppSettings.Story.MT2_CaveEscape) {
             if (player.canOpenDoor()) {
                 System.out.println("You have the power to open the door! You go through!");
             } else {
@@ -100,7 +100,7 @@ public class GameController {
     }
 
     private Tangible getTangibleObject(String itemName) {
-        if (AppSettings.canAccessFunctions(AppSettings.Story.S3M3)) {
+        if (AppSettings.canAccessFunctions(AppSettings.Story.MT8)) {
             return player.getItem(itemName);
         }
         if (itemName.equalsIgnoreCase("key")) {
@@ -179,7 +179,7 @@ public class GameController {
             System.out.println("You cannot take that!");
         }
 
-        if (AppSettings.canAccessFunctions(AppSettings.Story.S3M3)) {
+        if (AppSettings.canAccessFunctions(AppSettings.Story.MT8)) {
             player.addItem(item);
         } else {
             setItem(item);
@@ -264,21 +264,21 @@ public class GameController {
      * Prints the help script to the user.
      */
     public void printHelp() {
-        if (AppSettings.story == AppSettings.Story.S1M2_Beginning) {
+        if (AppSettings.story == AppSettings.Story.MT1_Beginning) {
             return;
         }
         System.out.println("Here are the list of commands that you can type:");
         System.out.println("- help (prints this message)");
         System.out.println("- move <direction>");
-        if (AppSettings.story == AppSettings.Story.S2M2_TestDirections) {
+        if (AppSettings.story == AppSettings.Story.MT3_TestDirections) {
             System.out.println("- use <item>");
-        } else if (AppSettings.story == AppSettings.Story.S2M3_HouseAndCave) {
+        } else if (AppSettings.story == AppSettings.Story.MT4_HouseAndCave) {
             System.out.println("- look <item>");
             System.out.println("- take <item>");
             System.out.println("- use <item>");
             System.out.println("- use <item> on <item>");
             System.out.println("- check items");
-        } else if (AppSettings.story == AppSettings.Story.S2M4_DigEscape) {
+        } else if (AppSettings.story == AppSettings.Story.MT5_DigEscape) {
             System.out.println("- look <item>");
             System.out.println("- take <item>");
             System.out.println("- use <item>");

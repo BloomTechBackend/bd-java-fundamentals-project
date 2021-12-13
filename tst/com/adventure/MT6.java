@@ -1,4 +1,4 @@
-package com.adventure.sprint3;
+package com.adventure;
 
 import main.com.adventure.GameInputProcessor;
 import main.com.adventure.settings.AppSettings;
@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class S3M1Test {
+public class MT6 {
 
     GameInputProcessor processor;
 
@@ -23,7 +23,7 @@ public class S3M1Test {
 
     @Test
     public void testCommandMove() {
-        if (AppSettings.story.ordinal() < AppSettings.Story.S3M1_TestDirections.ordinal()) {
+        if (AppSettings.story.ordinal() < AppSettings.Story.MT6_TestDirections.ordinal()) {
             return;
         }
 
@@ -41,7 +41,7 @@ public class S3M1Test {
 
     @Test
     public void testCommandUse() {
-        if (AppSettings.story.ordinal() < AppSettings.Story.S3M1_TestDirections.ordinal()) {
+        if (AppSettings.story.ordinal() < AppSettings.Story.MT6_TestDirections.ordinal()) {
             return;
         }
 
@@ -53,7 +53,7 @@ public class S3M1Test {
 
     @Test
     public void testCommandHelp() {
-        if (AppSettings.story.ordinal() < AppSettings.Story.S3M1_TestDirections.ordinal()) {
+        if (AppSettings.story.ordinal() < AppSettings.Story.MT6_TestDirections.ordinal()) {
             return;
         }
 

@@ -1,4 +1,4 @@
-package com.adventure.sprint2;
+package com.adventure;
 
 import main.com.adventure.world.objects.doors.DoorFactory;
 import main.com.adventure.world.objects.keys.KeyFactory;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class S2M3Test {
+public class MT4 {
 
     @Test
     public void testKeyConstructors() {

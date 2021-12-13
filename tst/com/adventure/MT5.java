@@ -1,4 +1,4 @@
-package com.adventure.sprint2;
+package com.adventure;
 
 import main.com.adventure.world.Direction;
 import main.com.adventure.world.objects.Hole;
@@ -12,7 +12,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class S2M4Test {
+public class MT5 {
 
     @Test
     public void testHole() {

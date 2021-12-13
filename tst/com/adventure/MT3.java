@@ -1,4 +1,4 @@
-package com.adventure.sprint2;
+package com.adventure;
 
 import main.com.adventure.GameInputProcessor;
 import main.com.adventure.player.Player;
@@ -13,13 +13,12 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
-import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class S2M2Test {
+public class MT3 {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -52,7 +51,7 @@ public class S2M2Test {
 
     @Test
     public void checkMoveInputWest() {
-        if (AppSettings.story.ordinal() >= AppSettings.Story.S3M1_TestDirections.ordinal()) {
+        if (AppSettings.story.ordinal() >= AppSettings.Story.MT6_TestDirections.ordinal()) {
             return;
         }
 
@@ -67,7 +66,7 @@ public class S2M2Test {
 
     @Test
     public void checkMoveInputEast() {
-        if (AppSettings.story.ordinal() >= AppSettings.Story.S3M1_TestDirections.ordinal()) {
+        if (AppSettings.story.ordinal() >= AppSettings.Story.MT6_TestDirections.ordinal()) {
             return;
         }
 
@@ -84,7 +83,7 @@ public class S2M2Test {
 
     @Test
     public void testInvalidMoveInput() {
-        if (AppSettings.story.ordinal() >= AppSettings.Story.S3M1_TestDirections.ordinal()) {
+        if (AppSettings.story.ordinal() >= AppSettings.Story.MT6_TestDirections.ordinal()) {
             return;
         }
 
@@ -100,7 +99,7 @@ public class S2M2Test {
 
     @Test
     public void testUseInput() {
-        if (AppSettings.story.ordinal() >= AppSettings.Story.S3M1_TestDirections.ordinal()) {
+        if (AppSettings.story.ordinal() >= AppSettings.Story.MT6_TestDirections.ordinal()) {
             return;
         }
 
@@ -119,7 +118,7 @@ public class S2M2Test {
 
     @Test
     public void checkSimpleInput() {
-        if (AppSettings.story.ordinal() >= AppSettings.Story.S3M1_TestDirections.ordinal()) {
+        if (AppSettings.story.ordinal() >= AppSettings.Story.MT6_TestDirections.ordinal()) {
             return;
         }
 

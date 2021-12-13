@@ -11,7 +11,7 @@ To run tests, you can do this inside of IntelliJ by opening the desired test fil
 You can also run tests in your terminal. Here's an example test command:
 
 ```
-./gradlew test --tests com.adventure.sprint1.S1M2Test
+./gradlew test --tests com.adventure.MT1
 ```
 
 To run the lint checker (verifies that your coding **style** follows best practice), you can do so in your terminal by running the following:

@@ -61,7 +61,7 @@ public class MT3 {
 
         Command command = processor.getNextCommand();
         assertEquals(CommandConstants.MOVE, command.getVerb());
-        assertEquals("west", command.getObjectName());
+        assertTrue(command.getObjectName().equalsIgnoreCase("west"));
     }
 
     @Test
@@ -78,7 +78,7 @@ public class MT3 {
         Command command = processor.getNextCommand();
 
         assertEquals(CommandConstants.MOVE, command.getVerb());
-        assertEquals("east", command.getObjectName().toLowerCase());
+        assertTrue(command.getObjectName().equalsIgnoreCase("east"));
     }
 
     @Test

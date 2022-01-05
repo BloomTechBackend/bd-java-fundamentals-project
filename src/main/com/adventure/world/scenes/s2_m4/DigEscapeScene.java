@@ -35,7 +35,7 @@ public class DigEscapeScene implements Scene {
         if (door.isOpen()) {
             return new ArrayList(List.of(Direction.EAST));
         } else {
-            return null;
+            return new ArrayList<>();
         }
     }
 

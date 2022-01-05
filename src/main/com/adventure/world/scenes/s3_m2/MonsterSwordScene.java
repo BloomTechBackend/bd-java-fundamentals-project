@@ -31,7 +31,7 @@ public class MonsterSwordScene implements Scene {
         if (monster == null) {
             return new ArrayList(List.of(Direction.EAST));
         } else {
-            return null;
+            return new ArrayList<>();
         }
     }
 

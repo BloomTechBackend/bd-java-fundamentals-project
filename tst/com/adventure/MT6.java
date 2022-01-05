@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -31,12 +32,12 @@ public class MT6 {
 
         Command command = processor.getNextCommand();
         assertEquals(CommandVerb.MOVE, command.getVerb());
-        assertEquals("west", command.getObjectName());
+        assertTrue(command.getObjectName().equalsIgnoreCase("west"));
 
         when(processor.prompt()).thenReturn("move east");
         command = processor.getNextCommand();
         assertEquals(CommandVerb.MOVE, command.getVerb());
-        assertEquals("east", command.getObjectName());
+        assertTrue(command.getObjectName().equalsIgnoreCase("east"));
     }
 
     @Test

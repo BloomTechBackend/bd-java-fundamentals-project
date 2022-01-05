@@ -58,7 +58,7 @@ public class MonsterScene implements IMonsterScene {
         if (monster == null) {
             return new ArrayList(List.of(Direction.EAST));
         } else {
-            return null;
+            return new ArrayList<>();
         }
     }
 

@@ -74,7 +74,7 @@ public class GameController {
     private void use(String itemName) {
         if (itemName.contains(" on ")) {
             String[] itemNames = itemName.split(" on ");
-            Tangible item = getTangibleObject(itemName);
+            Tangible item = getTangibleObject(itemNames[0]);
             Tangible receiver = getCurrentScene().getItem(itemNames[1]);
             if (itemNames.length != 2) {
                 printInvalidCommand();

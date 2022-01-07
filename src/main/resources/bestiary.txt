@@ -1,4 +1,4 @@
 Troll,3
-Oger,5
+Ogre,5
 Imp,2
 Dragon,10

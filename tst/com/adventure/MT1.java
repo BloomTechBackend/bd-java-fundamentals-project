@@ -9,7 +9,7 @@ class MT1 {
 
     @Test
     void smokeTest() {
-        assertNotEquals(AppSettings.Story.Invalid_Beginning, AppSettings.story, "Update the 'story' inside of main.com.adventure.settings.AppSettings to S1M2_Beginning");
+        assertNotEquals(AppSettings.Story.Invalid_Beginning, AppSettings.story, "Update the 'story' inside of main.com.adventure.settings.AppSettings to MT1_Beginning");
     }
 
 }

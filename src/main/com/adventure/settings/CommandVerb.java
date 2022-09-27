@@ -1,7 +1,7 @@
 package main.com.adventure.settings;
 
 /**
- * Sprint 3 Module 1
+ * Sprint 2 Module 3
  * This CommandVerb will be used instead of strings once we've learned about Enums.
  */
 
@@ -14,9 +14,9 @@ public enum CommandVerb {
     LOOK,
     INVALID,
     HELP,
-    //Used in Sprint 3 Module 2
+    //Used in Sprint 2 Module 3
     FIGHT,
-    //Used in Sprint 3 Module 3
+    //Used in Sprint 3 Module 1
     INVENTORY;
 
 

@@ -1,15 +1,15 @@
 package main.com.adventure.world.scenes;
 
 import main.com.adventure.world.objects.TangibleListener;
-import main.com.adventure.world.scenes.s2_m1.CaveEscapeScene;
-import main.com.adventure.world.scenes.s2_m2.ConsoleScene;
-import main.com.adventure.world.scenes.s2_m2.HallwayDoorScene;
-import main.com.adventure.world.scenes.s2_m2.TwoPathsScene;
-import main.com.adventure.world.scenes.s2_m3.HouseOutsideScene;
-import main.com.adventure.world.scenes.s2_m3.HouseScene;
-import main.com.adventure.world.scenes.s2_m3.OutsideCaveScene;
-import main.com.adventure.world.scenes.s2_m4.DigEscapeScene;
-import main.com.adventure.world.scenes.s3_m2.MonsterScene;
+import main.com.adventure.world.scenes.s1_m3.CaveEscapeScene;
+import main.com.adventure.world.scenes.s1_m4.ConsoleScene;
+import main.com.adventure.world.scenes.s1_m4.HallwayDoorScene;
+import main.com.adventure.world.scenes.s1_m4.TwoPathsScene;
+import main.com.adventure.world.scenes.s2_m1.HouseOutsideScene;
+import main.com.adventure.world.scenes.s2_m1.HouseScene;
+import main.com.adventure.world.scenes.s2_m1.OutsideCaveScene;
+import main.com.adventure.world.scenes.s2_m2.DigEscapeScene;
+import main.com.adventure.world.scenes.s3_m1.MonsterScene;
 
 public class SceneFactory {
 

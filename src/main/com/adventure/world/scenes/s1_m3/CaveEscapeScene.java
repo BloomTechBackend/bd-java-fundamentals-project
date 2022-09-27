@@ -1,4 +1,4 @@
-package main.com.adventure.world.scenes.s2_m1;
+package main.com.adventure.world.scenes.s1_m3;
 
 import main.com.adventure.world.Direction;
 import main.com.adventure.world.objects.Tangible;

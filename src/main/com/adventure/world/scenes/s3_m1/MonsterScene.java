@@ -1,4 +1,4 @@
-package main.com.adventure.world.scenes.s3_m2;
+package main.com.adventure.world.scenes.s3_m1;
 
 import main.com.adventure.world.Direction;
 import main.com.adventure.world.Monster;
